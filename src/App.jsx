@@ -5,20 +5,23 @@ import './App.css'
 
 function App() {
  // 6,203,132
-const style={flexDirection: "column", display: "flex",paddingTop: "10%",paddingBottom: "20%",backgroundColor: "rgb(6,203,132)"}
+const style={flexDirection: "column", display: "flex",marginBottom:"10%",backgroundColor: "rgb(6,203,132)",border: "8px",borderStyle: "dotted",borderColor: "cyan",textColor: "rgb(135,242,250)"}
   return (
     
       <div style={style}>
       
       <h1 style={{textAlign:"center",top: "25%"}}>Samuli Nukala</h1>
     
-      <p style={{fontSize: "1.5em",marginLeft: "15%",maxWidth: "70%"}}> Recently graduated programmer that is learning react to get into frontend development. Has experience in programming games for museums. Likes to jump head first into problems</p>
+      <p style={{fontSize: "1.5em",marginLeft: "15%",maxWidth: "70%"}}> Recently graduated programmer that is learning React to get into frontenddevelopment. Has experience in programming games for museums. Likes to jump head first into problems.</p>
+      <h1> Skills </h1>
+      <div style={{marginTop: "3%",marginLeft: "10%",display: "flex",flexWrap: "wrap",marginBottom:"5%"}}>
+      <Skills text="problem solving"  emoji="🔍"></Skills>
+      <Skills text="tenacity"  emoji="🦾"></Skills>
+      <Skills text="Intuitive instincts"  emoji="🎱"></Skills>
+      <Skills text="C#/Unity"  emoji="🕹️"></Skills>
+      <Skills text="Javascript" emoji="🧾"></Skills>
+      <Skills text="bug bashing" emoji="🫟"></Skills>
       
-      <div style={{marginTop: "3%",marginLeft: "10%",display: "flex"}}>
-      <Skills text="problemSolving " emojis={<span>&#x1f635;</span>} emoji="🌚"></Skills>
-      <Skills text="problemSolving " emojis={<span>&#x1f635;</span>} emoji="🌚"></Skills>
-      <Skills text="problemSolving " emojis={<span>&#x1f635;</span>} emoji="🌚"></Skills>
-      <Skills text="problemSolving " emojis={<span>&#x1f635;</span>} emoji="🌚"></Skills>
       </div>
        </div>
     
@@ -26,11 +29,12 @@ const style={flexDirection: "column", display: "flex",paddingTop: "10%",paddingB
 }
 // 203, 132, 54
 function Skills(props){
-const style={ fontSize: "1.2em",margin: "1%",padding: "6%",backgroundColor: "rgb(200,200,110)"}
+const style={fontSize: "1.4em"}
   return(
     
-    <div style={{outerWidth: "120%"}}>
-    <p1 style={style}>{props.text+props.emoji}</p1>
+    <div style={{paddingLeft: "3%",backgroundColor: "rgb(221,45,74)",margin: "1%",borderRadius:"6%"}}>
+    <p style={style}>{props.text+" "+props.emoji}</p>
+   
    
     </div>
   
